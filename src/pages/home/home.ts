@@ -14,13 +14,8 @@ export class HomePage {
   constructor(
     private qrScanner: QRScanner
   ) {
+    console.log('consutrcto');
     // Constructor.
-  }
-
-  /**
-  * Quand on entre dans la page on charge la caméra.
-  */
-  ionViewWillEnter() {
     this.initialize();
   }
 
@@ -35,6 +30,8 @@ export class HomePage {
   * Chargement du demande et demande de la permission.
   */
   async initialize() {
+    console.log('init');
+
     try {
       // On demande la permission de la caméra à l'utilisateur.
       // Un object est retourné "{authorized: boolean}".
